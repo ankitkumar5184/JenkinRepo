@@ -1,0 +1,2426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220922 18:33:16.784" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases">
+<suite id="s1-s1" name="Graphs" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases\Graphs">
+<suite id="s1-s1-s1" name="SunBrustChart" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases\Graphs\SunBrustChart.robot">
+<test id="s1-s1-s1-t1" name="Area chart with hover effect" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.highcharts.com/docs/chart-and-series-types/sunburst-series</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 18:33:17.740" level="INFO">Opening browser 'chrome' to base url 'https://www.highcharts.com/docs/chart-and-series-types/sunburst-series'.</msg>
+<status status="PASS" starttime="20220922 18:33:17.738" endtime="20220922 18:33:24.359"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 18:33:24.361" endtime="20220922 18:33:24.664"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220922 18:33:24.665" endtime="20220922 18:33:24.672"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Allow all cookies</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:24.674" level="INFO">Clicking link 'Allow all cookies'.</msg>
+<status status="PASS" starttime="20220922 18:33:24.673" endtime="20220922 18:33:25.963"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220922 18:33:25.966" endtime="20220922 18:33:28.210"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:28.212" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:28.211" endtime="20220922 18:33:28.559"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locator}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:29.914" level="INFO">${count} = 261</msg>
+<status status="PASS" starttime="20220922 18:33:28.561" endtime="20220922 18:33:29.914"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:29.916" endtime="20220922 18:33:29.917"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:29.918" endtime="20220922 18:33:29.926"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220922 18:33:29.927" endtime="20220922 18:33:34.066"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:34.071" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:34.070" endtime="20220922 18:33:35.382"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:35.386" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [1]'.</msg>
+<status status="PASS" starttime="20220922 18:33:35.385" endtime="20220922 18:33:35.977"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.016" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:35.979" endtime="20220922 18:33:36.016"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.088" level="INFO">${Text} = The population of The World is 7 542 010 939</msg>
+<status status="PASS" starttime="20220922 18:33:36.019" endtime="20220922 18:33:36.088"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:36.090" endtime="20220922 18:33:36.091"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:36.018" endtime="20220922 18:33:36.091"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:36.018" endtime="20220922 18:33:36.092"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:36.093" endtime="20220922 18:33:36.104"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:34.069" endtime="20220922 18:33:36.105"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:36.107" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:36.106" endtime="20220922 18:33:36.149"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.152" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [2]'.</msg>
+<status status="PASS" starttime="20220922 18:33:36.150" endtime="20220922 18:33:36.550"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.566" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:36.554" endtime="20220922 18:33:36.566"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.601" level="INFO">${Text} = The population of The World is 7 542 010 939</msg>
+<status status="PASS" starttime="20220922 18:33:36.571" endtime="20220922 18:33:36.602"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:36.604" endtime="20220922 18:33:36.605"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:36.570" endtime="20220922 18:33:36.605"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:36.570" endtime="20220922 18:33:36.606"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:36.606" endtime="20220922 18:33:36.612"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:36.106" endtime="20220922 18:33:36.613"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:36.615" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:36.614" endtime="20220922 18:33:36.776"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:36.779" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [3]'.</msg>
+<status status="PASS" starttime="20220922 18:33:36.778" endtime="20220922 18:33:37.152"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.180" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:37.155" endtime="20220922 18:33:37.180"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.245" level="INFO">${Text} = The population of Africa is 1 256 268 025</msg>
+<status status="PASS" starttime="20220922 18:33:37.183" endtime="20220922 18:33:37.245"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:37.247" endtime="20220922 18:33:37.248"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:37.182" endtime="20220922 18:33:37.248"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:37.182" endtime="20220922 18:33:37.249"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:37.249" endtime="20220922 18:33:37.260"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:36.614" endtime="20220922 18:33:37.261"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:37.262" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:37.262" endtime="20220922 18:33:37.304"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.307" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [4]'.</msg>
+<status status="PASS" starttime="20220922 18:33:37.306" endtime="20220922 18:33:37.680"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.698" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:37.681" endtime="20220922 18:33:37.699"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.780" level="INFO">${Text} = The population of America is 1 006 801 064</msg>
+<status status="PASS" starttime="20220922 18:33:37.702" endtime="20220922 18:33:37.780"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:37.782" endtime="20220922 18:33:37.782"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:37.701" endtime="20220922 18:33:37.783"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:37.700" endtime="20220922 18:33:37.783"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:37.784" endtime="20220922 18:33:37.798"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:37.261" endtime="20220922 18:33:37.799"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:37.801" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:37.800" endtime="20220922 18:33:37.863"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:37.866" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [5]'.</msg>
+<status status="PASS" starttime="20220922 18:33:37.865" endtime="20220922 18:33:38.248"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:38.293" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:38.249" endtime="20220922 18:33:38.293"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:38.349" level="INFO">${Text} = The population of Europe is 743 253 404</msg>
+<status status="PASS" starttime="20220922 18:33:38.296" endtime="20220922 18:33:38.349"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:38.350" endtime="20220922 18:33:38.351"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:38.296" endtime="20220922 18:33:38.352"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:38.295" endtime="20220922 18:33:38.353"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:38.355" endtime="20220922 18:33:38.365"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:37.799" endtime="20220922 18:33:38.366"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:38.368" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:38.367" endtime="20220922 18:33:38.684"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:38.688" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [6]'.</msg>
+<status status="PASS" starttime="20220922 18:33:38.688" endtime="20220922 18:33:39.617"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:39.729" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:39.619" endtime="20220922 18:33:39.729"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:39.781" level="INFO">${Text} = The population of The World is 7 542 010 939</msg>
+<status status="PASS" starttime="20220922 18:33:39.732" endtime="20220922 18:33:39.781"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:39.782" endtime="20220922 18:33:39.783"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:39.731" endtime="20220922 18:33:39.784"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:39.731" endtime="20220922 18:33:39.784"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:39.785" endtime="20220922 18:33:39.800"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:38.367" endtime="20220922 18:33:39.800"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:39.802" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:39.801" endtime="20220922 18:33:39.834"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:39.837" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [7]'.</msg>
+<status status="PASS" starttime="20220922 18:33:39.836" endtime="20220922 18:33:40.345"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.369" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:40.347" endtime="20220922 18:33:40.369"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.402" level="INFO">${Text} = The population of Syria is 18 269 868</msg>
+<status status="PASS" starttime="20220922 18:33:40.372" endtime="20220922 18:33:40.402"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:40.404" endtime="20220922 18:33:40.405"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:40.372" endtime="20220922 18:33:40.406"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:40.371" endtime="20220922 18:33:40.407"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:40.407" endtime="20220922 18:33:40.412"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:39.801" endtime="20220922 18:33:40.413"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:40.415" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:40.414" endtime="20220922 18:33:40.447"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.449" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [8]'.</msg>
+<status status="PASS" starttime="20220922 18:33:40.448" endtime="20220922 18:33:40.764"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.818" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:40.766" endtime="20220922 18:33:40.818"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.864" level="INFO">${Text} = The population of Syria is 18 269 868</msg>
+<status status="PASS" starttime="20220922 18:33:40.821" endtime="20220922 18:33:40.864"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:40.866" endtime="20220922 18:33:40.866"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:40.821" endtime="20220922 18:33:40.867"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:40.820" endtime="20220922 18:33:40.867"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:40.868" endtime="20220922 18:33:40.878"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:40.414" endtime="20220922 18:33:40.879"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:40.881" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:40.880" endtime="20220922 18:33:40.982"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:40.986" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [9]'.</msg>
+<status status="PASS" starttime="20220922 18:33:40.985" endtime="20220922 18:33:41.432"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:41.481" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:41.434" endtime="20220922 18:33:41.481"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:41.509" level="INFO">${Text} = </msg>
+<status status="PASS" starttime="20220922 18:33:41.484" endtime="20220922 18:33:41.509"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:41.513" endtime="20220922 18:33:41.514"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:41.483" endtime="20220922 18:33:41.514"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:41.483" endtime="20220922 18:33:41.515"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:41.515" endtime="20220922 18:33:41.523"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:40.880" endtime="20220922 18:33:41.524"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:41.525" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:41.525" endtime="20220922 18:33:41.559"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:41.562" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [10]'.</msg>
+<status status="PASS" starttime="20220922 18:33:41.561" endtime="20220922 18:33:41.897"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:41.919" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:41.899" endtime="20220922 18:33:41.919"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:42.013" level="INFO">${Text} = The population of Ethiopia is 104 957 438</msg>
+<status status="PASS" starttime="20220922 18:33:41.923" endtime="20220922 18:33:42.014"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:42.016" endtime="20220922 18:33:42.017"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:41.922" endtime="20220922 18:33:42.017"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:41.922" endtime="20220922 18:33:42.018"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:42.019" endtime="20220922 18:33:42.062"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:41.524" endtime="20220922 18:33:42.062"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:42.064" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:42.064" endtime="20220922 18:33:42.167"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:42.173" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [11]'.</msg>
+<status status="PASS" starttime="20220922 18:33:42.171" endtime="20220922 18:33:42.627"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:42.648" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:42.629" endtime="20220922 18:33:42.648"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:42.748" level="INFO">${Text} = The population of Tanzania is 57 310 019</msg>
+<status status="PASS" starttime="20220922 18:33:42.651" endtime="20220922 18:33:42.748"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:42.749" endtime="20220922 18:33:42.750"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:42.650" endtime="20220922 18:33:42.751"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:42.650" endtime="20220922 18:33:42.751"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:42.751" endtime="20220922 18:33:42.764"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:42.063" endtime="20220922 18:33:42.764"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:42.766" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:42.765" endtime="20220922 18:33:42.853"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:42.856" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [12]'.</msg>
+<status status="PASS" starttime="20220922 18:33:42.855" endtime="20220922 18:33:43.324"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:43.837" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:43.326" endtime="20220922 18:33:43.837"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:43.868" level="INFO">${Text} = The population of Tanzania is 57 310 019</msg>
+<status status="PASS" starttime="20220922 18:33:43.839" endtime="20220922 18:33:43.868"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:43.870" endtime="20220922 18:33:43.872"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:43.839" endtime="20220922 18:33:43.873"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:43.839" endtime="20220922 18:33:43.874"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:43.875" endtime="20220922 18:33:43.879"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:42.765" endtime="20220922 18:33:43.880"/>
+</iter>
+<iter>
+<var name="${i}">13</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:43.881" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:43.881" endtime="20220922 18:33:43.927"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:43.930" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [13]'.</msg>
+<status status="PASS" starttime="20220922 18:33:43.929" endtime="20220922 18:33:44.575"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:44.717" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:44.577" endtime="20220922 18:33:44.717"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:44.769" level="INFO">${Text} = The population of Kenya is 49 699 862</msg>
+<status status="PASS" starttime="20220922 18:33:44.719" endtime="20220922 18:33:44.769"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:44.773" endtime="20220922 18:33:44.774"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:44.719" endtime="20220922 18:33:44.775"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:44.718" endtime="20220922 18:33:44.775"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:44.776" endtime="20220922 18:33:44.794"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:43.880" endtime="20220922 18:33:44.794"/>
+</iter>
+<iter>
+<var name="${i}">14</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:44.796" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:44.795" endtime="20220922 18:33:44.896"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:44.898" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [14]'.</msg>
+<status status="PASS" starttime="20220922 18:33:44.897" endtime="20220922 18:33:45.736"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:46.095" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:45.740" endtime="20220922 18:33:46.095"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:46.422" level="INFO">${Text} = The population of Kenya is 49 699 862</msg>
+<status status="PASS" starttime="20220922 18:33:46.098" endtime="20220922 18:33:46.422"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:46.425" endtime="20220922 18:33:46.425"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:46.098" endtime="20220922 18:33:46.426"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:46.097" endtime="20220922 18:33:46.426"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:46.427" endtime="20220922 18:33:46.583"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:44.795" endtime="20220922 18:33:46.584"/>
+</iter>
+<iter>
+<var name="${i}">15</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:46.585" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:46.585" endtime="20220922 18:33:46.941"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:46.944" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [15]'.</msg>
+<status status="PASS" starttime="20220922 18:33:46.943" endtime="20220922 18:33:47.484"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:47.569" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:47.486" endtime="20220922 18:33:47.569"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:47.608" level="INFO">${Text} = The population of Uganda is 42 862 958</msg>
+<status status="PASS" starttime="20220922 18:33:47.572" endtime="20220922 18:33:47.608"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:47.609" endtime="20220922 18:33:47.610"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:47.571" endtime="20220922 18:33:47.611"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:47.570" endtime="20220922 18:33:47.611"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:47.612" endtime="20220922 18:33:47.628"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:46.584" endtime="20220922 18:33:47.629"/>
+</iter>
+<iter>
+<var name="${i}">16</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:47.631" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:47.630" endtime="20220922 18:33:47.679"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:47.682" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [16]'.</msg>
+<status status="PASS" starttime="20220922 18:33:47.682" endtime="20220922 18:33:48.038"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.051" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:48.041" endtime="20220922 18:33:48.051"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.079" level="INFO">${Text} = The population of Uganda is 42 862 958</msg>
+<status status="PASS" starttime="20220922 18:33:48.054" endtime="20220922 18:33:48.079"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:48.081" endtime="20220922 18:33:48.082"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:48.054" endtime="20220922 18:33:48.082"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:48.053" endtime="20220922 18:33:48.083"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:48.083" endtime="20220922 18:33:48.086"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:47.630" endtime="20220922 18:33:48.087"/>
+</iter>
+<iter>
+<var name="${i}">17</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:48.090" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:48.089" endtime="20220922 18:33:48.116"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.119" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [17]'.</msg>
+<status status="PASS" starttime="20220922 18:33:48.118" endtime="20220922 18:33:48.432"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.444" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:48.433" endtime="20220922 18:33:48.444"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.464" level="INFO">${Text} = The population of Uganda is 42 862 958</msg>
+<status status="PASS" starttime="20220922 18:33:48.447" endtime="20220922 18:33:48.464"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:48.467" endtime="20220922 18:33:48.468"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:48.447" endtime="20220922 18:33:48.468"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:48.446" endtime="20220922 18:33:48.468"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:48.469" endtime="20220922 18:33:48.472"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:48.088" endtime="20220922 18:33:48.474"/>
+</iter>
+<iter>
+<var name="${i}">18</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:48.475" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:48.475" endtime="20220922 18:33:48.501"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.504" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [18]'.</msg>
+<status status="PASS" starttime="20220922 18:33:48.503" endtime="20220922 18:33:48.950"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:48.971" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:48.952" endtime="20220922 18:33:48.971"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.031" level="INFO">${Text} = The population of Mozambique is 29 668 834</msg>
+<status status="PASS" starttime="20220922 18:33:48.976" endtime="20220922 18:33:49.031"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:49.033" endtime="20220922 18:33:49.034"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:48.976" endtime="20220922 18:33:49.034"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:48.974" endtime="20220922 18:33:49.035"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:49.036" endtime="20220922 18:33:49.040"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:48.474" endtime="20220922 18:33:49.041"/>
+</iter>
+<iter>
+<var name="${i}">19</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:49.044" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.043" endtime="20220922 18:33:49.088"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.094" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [19]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.093" endtime="20220922 18:33:49.448"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.460" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:49.449" endtime="20220922 18:33:49.460"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.482" level="INFO">${Text} = The population of Mozambique is 29 668 834</msg>
+<status status="PASS" starttime="20220922 18:33:49.462" endtime="20220922 18:33:49.482"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:49.484" endtime="20220922 18:33:49.484"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:49.462" endtime="20220922 18:33:49.485"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:49.461" endtime="20220922 18:33:49.485"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:49.486" endtime="20220922 18:33:49.491"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:49.042" endtime="20220922 18:33:49.491"/>
+</iter>
+<iter>
+<var name="${i}">20</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:49.493" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.492" endtime="20220922 18:33:49.520"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.524" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [20]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.522" endtime="20220922 18:33:49.841"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.851" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:49.843" endtime="20220922 18:33:49.851"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.873" level="INFO">${Text} = The population of Mozambique is 29 668 834</msg>
+<status status="PASS" starttime="20220922 18:33:49.853" endtime="20220922 18:33:49.873"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:49.875" endtime="20220922 18:33:49.876"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:49.853" endtime="20220922 18:33:49.876"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:49.853" endtime="20220922 18:33:49.877"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:49.878" endtime="20220922 18:33:49.881"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:49.492" endtime="20220922 18:33:49.881"/>
+</iter>
+<iter>
+<var name="${i}">21</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:49.883" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.882" endtime="20220922 18:33:49.909"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:49.911" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [21]'.</msg>
+<status status="PASS" starttime="20220922 18:33:49.910" endtime="20220922 18:33:50.229"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.239" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:50.231" endtime="20220922 18:33:50.240"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.264" level="INFO">${Text} = The population of Mozambique is 29 668 834</msg>
+<status status="PASS" starttime="20220922 18:33:50.243" endtime="20220922 18:33:50.264"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:50.265" endtime="20220922 18:33:50.266"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:50.243" endtime="20220922 18:33:50.266"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:50.242" endtime="20220922 18:33:50.267"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:50.267" endtime="20220922 18:33:50.270"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:49.882" endtime="20220922 18:33:50.271"/>
+</iter>
+<iter>
+<var name="${i}">22</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:50.272" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:50.271" endtime="20220922 18:33:50.305"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.309" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [22]'.</msg>
+<status status="PASS" starttime="20220922 18:33:50.308" endtime="20220922 18:33:50.636"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.672" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:50.646" endtime="20220922 18:33:50.672"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.758" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:50.678" endtime="20220922 18:33:50.759"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:50.761" endtime="20220922 18:33:50.762"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:50.678" endtime="20220922 18:33:50.763"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:50.677" endtime="20220922 18:33:50.764"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:50.764" endtime="20220922 18:33:50.772"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:50.271" endtime="20220922 18:33:50.775"/>
+</iter>
+<iter>
+<var name="${i}">23</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:50.778" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:50.777" endtime="20220922 18:33:50.870"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:50.875" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [23]'.</msg>
+<status status="PASS" starttime="20220922 18:33:50.872" endtime="20220922 18:33:51.231"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:51.247" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:51.233" endtime="20220922 18:33:51.247"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:51.275" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:51.249" endtime="20220922 18:33:51.275"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:51.278" endtime="20220922 18:33:51.279"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:51.249" endtime="20220922 18:33:51.279"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:51.248" endtime="20220922 18:33:51.280"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:51.280" endtime="20220922 18:33:51.285"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:50.776" endtime="20220922 18:33:51.286"/>
+</iter>
+<iter>
+<var name="${i}">24</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:51.287" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:51.287" endtime="20220922 18:33:51.353"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:51.356" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [24]'.</msg>
+<status status="PASS" starttime="20220922 18:33:51.355" endtime="20220922 18:33:51.701"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:51.766" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:51.704" endtime="20220922 18:33:51.766"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:51.839" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:51.769" endtime="20220922 18:33:51.839"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:51.841" endtime="20220922 18:33:51.842"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:51.769" endtime="20220922 18:33:51.843"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:51.768" endtime="20220922 18:33:51.843"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:51.844" endtime="20220922 18:33:51.927"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:51.286" endtime="20220922 18:33:51.928"/>
+</iter>
+<iter>
+<var name="${i}">25</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:51.930" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:51.929" endtime="20220922 18:33:52.004"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:52.008" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [25]'.</msg>
+<status status="PASS" starttime="20220922 18:33:52.006" endtime="20220922 18:33:52.405"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:52.437" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:52.407" endtime="20220922 18:33:52.437"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:52.567" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:52.443" endtime="20220922 18:33:52.568"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:52.571" endtime="20220922 18:33:52.574"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:52.441" endtime="20220922 18:33:52.576"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:52.440" endtime="20220922 18:33:52.577"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:52.578" endtime="20220922 18:33:52.605"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:51.929" endtime="20220922 18:33:52.607"/>
+</iter>
+<iter>
+<var name="${i}">26</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:52.610" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:52.609" endtime="20220922 18:33:52.709"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:52.712" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [26]'.</msg>
+<status status="PASS" starttime="20220922 18:33:52.711" endtime="20220922 18:33:53.033"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.081" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:53.035" endtime="20220922 18:33:53.081"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.133" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:53.085" endtime="20220922 18:33:53.133"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:53.135" endtime="20220922 18:33:53.135"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:53.085" endtime="20220922 18:33:53.136"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:53.084" endtime="20220922 18:33:53.136"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:53.137" endtime="20220922 18:33:53.147"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:52.608" endtime="20220922 18:33:53.147"/>
+</iter>
+<iter>
+<var name="${i}">27</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:53.149" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:53.148" endtime="20220922 18:33:53.182"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.186" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [27]'.</msg>
+<status status="PASS" starttime="20220922 18:33:53.185" endtime="20220922 18:33:53.530"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.542" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:53.531" endtime="20220922 18:33:53.542"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.561" level="INFO">${Text} = The population of Madagascar is 25 570 895</msg>
+<status status="PASS" starttime="20220922 18:33:53.544" endtime="20220922 18:33:53.562"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:53.563" endtime="20220922 18:33:53.564"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:53.544" endtime="20220922 18:33:53.564"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:53.543" endtime="20220922 18:33:53.565"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:53.566" endtime="20220922 18:33:53.568"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:53.148" endtime="20220922 18:33:53.568"/>
+</iter>
+<iter>
+<var name="${i}">28</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:53.570" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:53.569" endtime="20220922 18:33:53.597"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:53.600" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [28]'.</msg>
+<status status="PASS" starttime="20220922 18:33:53.599" endtime="20220922 18:33:54.083"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:54.321" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:54.085" endtime="20220922 18:33:54.321"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:54.537" level="INFO">${Text} = The population of Eastern Africa is 422 036 243</msg>
+<status status="PASS" starttime="20220922 18:33:54.327" endtime="20220922 18:33:54.537"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:54.539" endtime="20220922 18:33:54.543"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:54.326" endtime="20220922 18:33:54.544"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:54.323" endtime="20220922 18:33:54.545"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:54.546" endtime="20220922 18:33:54.563"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:53.569" endtime="20220922 18:33:54.564"/>
+</iter>
+<iter>
+<var name="${i}">29</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:54.565" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:54.564" endtime="20220922 18:33:54.607"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:54.610" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [29]'.</msg>
+<status status="PASS" starttime="20220922 18:33:54.609" endtime="20220922 18:33:55.153"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.190" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:55.155" endtime="20220922 18:33:55.190"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.253" level="INFO">${Text} = The population of Somalia is 14 742 523</msg>
+<status status="PASS" starttime="20220922 18:33:55.195" endtime="20220922 18:33:55.253"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:55.255" endtime="20220922 18:33:55.256"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:55.195" endtime="20220922 18:33:55.256"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:55.194" endtime="20220922 18:33:55.257"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:55.258" endtime="20220922 18:33:55.269"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:54.564" endtime="20220922 18:33:55.270"/>
+</iter>
+<iter>
+<var name="${i}">30</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:55.271" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:55.271" endtime="20220922 18:33:55.321"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.325" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [30]'.</msg>
+<status status="PASS" starttime="20220922 18:33:55.323" endtime="20220922 18:33:55.683"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.702" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:55.685" endtime="20220922 18:33:55.702"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.734" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:55.704" endtime="20220922 18:33:55.735"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:55.736" endtime="20220922 18:33:55.737"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:55.704" endtime="20220922 18:33:55.737"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:55.704" endtime="20220922 18:33:55.738"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:55.738" endtime="20220922 18:33:55.743"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:55.270" endtime="20220922 18:33:55.744"/>
+</iter>
+<iter>
+<var name="${i}">31</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:55.745" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:55.745" endtime="20220922 18:33:55.786"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:55.788" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [31]'.</msg>
+<status status="PASS" starttime="20220922 18:33:55.787" endtime="20220922 18:33:56.131"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.151" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:56.133" endtime="20220922 18:33:56.151"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.206" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:56.154" endtime="20220922 18:33:56.206"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:56.210" endtime="20220922 18:33:56.211"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:56.153" endtime="20220922 18:33:56.212"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:56.153" endtime="20220922 18:33:56.212"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:56.213" endtime="20220922 18:33:56.217"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:55.744" endtime="20220922 18:33:56.217"/>
+</iter>
+<iter>
+<var name="${i}">32</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:56.219" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:56.218" endtime="20220922 18:33:56.256"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.261" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [32]'.</msg>
+<status status="PASS" starttime="20220922 18:33:56.260" endtime="20220922 18:33:56.582"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.594" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:56.584" endtime="20220922 18:33:56.594"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.612" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:56.596" endtime="20220922 18:33:56.612"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:56.614" endtime="20220922 18:33:56.615"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:56.596" endtime="20220922 18:33:56.615"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:56.595" endtime="20220922 18:33:56.616"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:56.616" endtime="20220922 18:33:56.621"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:56.218" endtime="20220922 18:33:56.621"/>
+</iter>
+<iter>
+<var name="${i}">33</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:56.622" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:56.622" endtime="20220922 18:33:56.647"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:56.650" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [33]'.</msg>
+<status status="PASS" starttime="20220922 18:33:56.649" endtime="20220922 18:33:57.005"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.019" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:57.007" endtime="20220922 18:33:57.019"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.040" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:57.022" endtime="20220922 18:33:57.040"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:57.042" endtime="20220922 18:33:57.043"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.022" endtime="20220922 18:33:57.044"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:57.021" endtime="20220922 18:33:57.044"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:57.045" endtime="20220922 18:33:57.048"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:56.622" endtime="20220922 18:33:57.049"/>
+</iter>
+<iter>
+<var name="${i}">34</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:57.051" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.050" endtime="20220922 18:33:57.076"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.079" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [34]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.078" endtime="20220922 18:33:57.391"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.402" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:57.393" endtime="20220922 18:33:57.402"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.422" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:57.404" endtime="20220922 18:33:57.422"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:57.424" endtime="20220922 18:33:57.425"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.403" endtime="20220922 18:33:57.425"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:57.403" endtime="20220922 18:33:57.426"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:57.426" endtime="20220922 18:33:57.430"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.050" endtime="20220922 18:33:57.430"/>
+</iter>
+<iter>
+<var name="${i}">35</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:57.431" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.431" endtime="20220922 18:33:57.453"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.455" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [35]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.454" endtime="20220922 18:33:57.768"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.779" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:57.770" endtime="20220922 18:33:57.779"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.798" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:57.781" endtime="20220922 18:33:57.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:57.800" endtime="20220922 18:33:57.800"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.781" endtime="20220922 18:33:57.801"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:57.780" endtime="20220922 18:33:57.801"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:57.802" endtime="20220922 18:33:57.805"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.431" endtime="20220922 18:33:57.805"/>
+</iter>
+<iter>
+<var name="${i}">36</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:57.806" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.806" endtime="20220922 18:33:57.860"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:57.863" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [36]'.</msg>
+<status status="PASS" starttime="20220922 18:33:57.862" endtime="20220922 18:33:58.191"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.204" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:58.193" endtime="20220922 18:33:58.204"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.224" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:58.206" endtime="20220922 18:33:58.224"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:58.226" endtime="20220922 18:33:58.227"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:58.205" endtime="20220922 18:33:58.228"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:58.205" endtime="20220922 18:33:58.229"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:58.229" endtime="20220922 18:33:58.233"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:57.805" endtime="20220922 18:33:58.233"/>
+</iter>
+<iter>
+<var name="${i}">37</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:58.235" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:58.235" endtime="20220922 18:33:58.261"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.263" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [37]'.</msg>
+<status status="PASS" starttime="20220922 18:33:58.262" endtime="20220922 18:33:58.573"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.586" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:58.575" endtime="20220922 18:33:58.586"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.607" level="INFO">${Text} = The population of Nigeria is 190 886 311</msg>
+<status status="PASS" starttime="20220922 18:33:58.589" endtime="20220922 18:33:58.607"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:58.609" endtime="20220922 18:33:58.609"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:58.588" endtime="20220922 18:33:58.610"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:58.588" endtime="20220922 18:33:58.610"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:58.611" endtime="20220922 18:33:58.615"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:58.234" endtime="20220922 18:33:58.615"/>
+</iter>
+<iter>
+<var name="${i}">38</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:58.617" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:58.616" endtime="20220922 18:33:58.657"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.660" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [38]'.</msg>
+<status status="PASS" starttime="20220922 18:33:58.659" endtime="20220922 18:33:58.966"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:58.983" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:58.968" endtime="20220922 18:33:58.984"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.008" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:33:58.986" endtime="20220922 18:33:59.009"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:59.011" endtime="20220922 18:33:59.012"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:58.986" endtime="20220922 18:33:59.012"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:58.985" endtime="20220922 18:33:59.013"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:59.014" endtime="20220922 18:33:59.020"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:58.616" endtime="20220922 18:33:59.021"/>
+</iter>
+<iter>
+<var name="${i}">39</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:59.022" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.022" endtime="20220922 18:33:59.055"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.058" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [39]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.057" endtime="20220922 18:33:59.386"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.398" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:59.388" endtime="20220922 18:33:59.398"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.421" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:33:59.400" endtime="20220922 18:33:59.421"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:59.423" endtime="20220922 18:33:59.423"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:59.400" endtime="20220922 18:33:59.424"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:59.400" endtime="20220922 18:33:59.424"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:59.425" endtime="20220922 18:33:59.428"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:59.022" endtime="20220922 18:33:59.428"/>
+</iter>
+<iter>
+<var name="${i}">40</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:59.430" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.429" endtime="20220922 18:33:59.453"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.455" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [40]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.454" endtime="20220922 18:33:59.761"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.771" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:33:59.762" endtime="20220922 18:33:59.772"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.791" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:33:59.774" endtime="20220922 18:33:59.791"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:33:59.793" endtime="20220922 18:33:59.794"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:59.774" endtime="20220922 18:33:59.795"/>
+</iter>
+<status status="PASS" starttime="20220922 18:33:59.773" endtime="20220922 18:33:59.795"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:33:59.796" endtime="20220922 18:33:59.799"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:59.429" endtime="20220922 18:33:59.800"/>
+</iter>
+<iter>
+<var name="${i}">41</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:33:59.801" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.801" endtime="20220922 18:33:59.828"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:33:59.831" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [41]'.</msg>
+<status status="PASS" starttime="20220922 18:33:59.830" endtime="20220922 18:34:00.155"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.218" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:00.156" endtime="20220922 18:34:00.218"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.271" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:34:00.221" endtime="20220922 18:34:00.271"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:00.273" endtime="20220922 18:34:00.274"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:00.220" endtime="20220922 18:34:00.274"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:00.220" endtime="20220922 18:34:00.275"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:00.277" endtime="20220922 18:34:00.284"/>
+</kw>
+<status status="PASS" starttime="20220922 18:33:59.800" endtime="20220922 18:34:00.285"/>
+</iter>
+<iter>
+<var name="${i}">42</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:00.287" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:00.286" endtime="20220922 18:34:00.325"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.328" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [42]'.</msg>
+<status status="PASS" starttime="20220922 18:34:00.327" endtime="20220922 18:34:00.657"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.668" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:00.659" endtime="20220922 18:34:00.668"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.689" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:34:00.671" endtime="20220922 18:34:00.689"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:00.691" endtime="20220922 18:34:00.692"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:00.671" endtime="20220922 18:34:00.693"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:00.670" endtime="20220922 18:34:00.693"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:00.694" endtime="20220922 18:34:00.698"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:00.286" endtime="20220922 18:34:00.699"/>
+</iter>
+<iter>
+<var name="${i}">43</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:00.700" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:00.700" endtime="20220922 18:34:00.738"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:00.741" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [43]'.</msg>
+<status status="PASS" starttime="20220922 18:34:00.740" endtime="20220922 18:34:01.052"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.065" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:01.054" endtime="20220922 18:34:01.065"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.083" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:34:01.068" endtime="20220922 18:34:01.083"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:01.084" endtime="20220922 18:34:01.085"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.067" endtime="20220922 18:34:01.085"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:01.067" endtime="20220922 18:34:01.085"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:01.086" endtime="20220922 18:34:01.088"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:00.699" endtime="20220922 18:34:01.089"/>
+</iter>
+<iter>
+<var name="${i}">44</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:01.090" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.090" endtime="20220922 18:34:01.111"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.114" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [44]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.113" endtime="20220922 18:34:01.430"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.442" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:01.432" endtime="20220922 18:34:01.442"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.462" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:34:01.445" endtime="20220922 18:34:01.462"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:01.464" endtime="20220922 18:34:01.465"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.445" endtime="20220922 18:34:01.466"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:01.444" endtime="20220922 18:34:01.467"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:01.467" endtime="20220922 18:34:01.470"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.089" endtime="20220922 18:34:01.471"/>
+</iter>
+<iter>
+<var name="${i}">45</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:01.472" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.472" endtime="20220922 18:34:01.495"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.497" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [45]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.496" endtime="20220922 18:34:01.802"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.814" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:01.804" endtime="20220922 18:34:01.814"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.833" level="INFO">${Text} = The population of Ghana is 28 833 629</msg>
+<status status="PASS" starttime="20220922 18:34:01.816" endtime="20220922 18:34:01.833"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:01.835" endtime="20220922 18:34:01.836"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.816" endtime="20220922 18:34:01.836"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:01.815" endtime="20220922 18:34:01.837"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:01.838" endtime="20220922 18:34:01.840"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.471" endtime="20220922 18:34:01.841"/>
+</iter>
+<iter>
+<var name="${i}">46</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:01.843" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.842" endtime="20220922 18:34:01.870"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:01.873" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [46]'.</msg>
+<status status="PASS" starttime="20220922 18:34:01.872" endtime="20220922 18:34:02.191"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.331" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:02.195" endtime="20220922 18:34:02.331"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.373" level="INFO">${Text} = The population of Western Africa is 371 990 119</msg>
+<status status="PASS" starttime="20220922 18:34:02.334" endtime="20220922 18:34:02.374"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:02.375" endtime="20220922 18:34:02.376"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:02.334" endtime="20220922 18:34:02.377"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:02.333" endtime="20220922 18:34:02.378"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:02.379" endtime="20220922 18:34:02.388"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:01.841" endtime="20220922 18:34:02.388"/>
+</iter>
+<iter>
+<var name="${i}">47</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:02.390" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:02.389" endtime="20220922 18:34:02.438"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.441" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [47]'.</msg>
+<status status="PASS" starttime="20220922 18:34:02.440" endtime="20220922 18:34:02.785"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.805" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:02.787" endtime="20220922 18:34:02.805"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.873" level="INFO">${Text} = The population of Niger is 21 477 348</msg>
+<status status="PASS" starttime="20220922 18:34:02.808" endtime="20220922 18:34:02.873"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:02.875" endtime="20220922 18:34:02.876"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:02.808" endtime="20220922 18:34:02.877"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:02.807" endtime="20220922 18:34:02.878"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:02.879" endtime="20220922 18:34:02.887"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:02.389" endtime="20220922 18:34:02.887"/>
+</iter>
+<iter>
+<var name="${i}">48</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:02.889" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:02.888" endtime="20220922 18:34:02.926"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:02.930" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [48]'.</msg>
+<status status="PASS" starttime="20220922 18:34:02.929" endtime="20220922 18:34:03.257"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.274" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:03.259" endtime="20220922 18:34:03.274"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.302" level="INFO">${Text} = The population of Guinea is 12 717 176</msg>
+<status status="PASS" starttime="20220922 18:34:03.277" endtime="20220922 18:34:03.303"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:03.305" endtime="20220922 18:34:03.306"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:03.277" endtime="20220922 18:34:03.306"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:03.276" endtime="20220922 18:34:03.307"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:03.307" endtime="20220922 18:34:03.313"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:02.888" endtime="20220922 18:34:03.313"/>
+</iter>
+<iter>
+<var name="${i}">49</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:03.315" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:03.314" endtime="20220922 18:34:03.341"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.344" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [49]'.</msg>
+<status status="PASS" starttime="20220922 18:34:03.343" endtime="20220922 18:34:03.676"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.693" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20220922 18:34:03.678" endtime="20220922 18:34:03.694"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.726" level="INFO">${Text} = The population of Liberia is 4 731 906</msg>
+<status status="PASS" starttime="20220922 18:34:03.697" endtime="20220922 18:34:03.727"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:34:03.729" endtime="20220922 18:34:03.730"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:03.697" endtime="20220922 18:34:03.730"/>
+</iter>
+<status status="PASS" starttime="20220922 18:34:03.696" endtime="20220922 18:34:03.731"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:34:03.731" endtime="20220922 18:34:03.736"/>
+</kw>
+<status status="PASS" starttime="20220922 18:34:03.314" endtime="20220922 18:34:03.736"/>
+</iter>
+<iter>
+<var name="${i}">50</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:34:03.738" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:34:03.737" endtime="20220922 18:34:03.772"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:34:03.774" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,71) scale(1 1)"])//*[name()='path']) [50]'.</msg>

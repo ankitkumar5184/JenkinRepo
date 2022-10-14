@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220922 18:28:10.080" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases">
+<suite id="s1-s1" name="Graphs" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases\Graphs">
+<suite id="s1-s1-s1" name="Dependencywheel" source="C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\TestCases\Graphs\Dependencywheel.robot">
+<test id="s1-s1-s1-t1" name="Area chart with hover effect" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.highcharts.com/docs/chart-and-series-types/dependency-wheel</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 18:28:10.379" level="INFO">Opening browser 'chrome' to base url 'https://www.highcharts.com/docs/chart-and-series-types/dependency-wheel'.</msg>
+<status status="PASS" starttime="20220922 18:28:10.378" endtime="20220922 18:28:15.226"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 18:28:15.227" endtime="20220922 18:28:15.556"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220922 18:28:15.556" endtime="20220922 18:28:15.559"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Allow all cookies</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220922 18:28:15.560" level="INFO">Clicking link 'Allow all cookies'.</msg>
+<status status="PASS" starttime="20220922 18:28:15.559" endtime="20220922 18:28:15.798"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220922 18:28:15.799" endtime="20220922 18:28:17.083"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:28:17.084" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:28:17.083" endtime="20220922 18:28:17.333"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locator}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220922 18:28:17.373" level="INFO">${count} = 63</msg>
+<status status="PASS" starttime="20220922 18:28:17.333" endtime="20220922 18:28:17.373"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 18:28:17.374" endtime="20220922 18:28:17.375"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220922 18:28:17.375" endtime="20220922 18:28:17.378"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220922 18:28:17.379" endtime="20220922 18:28:18.696"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@title="Highcharts example"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220922 18:28:18.699" level="INFO">Selecting frame '//iframe[@title="Highcharts example"]'.</msg>
+<status status="PASS" starttime="20220922 18:28:18.698" endtime="20220922 18:28:18.999"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Locator} [${i}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 18:28:19.000" level="INFO">Simulating Mouse Over on element '((//*[local-name()='svg']//*[local-name()='g' and @transform="translate(10,53) scale(1 1)"])//*[name()='path']) [1]'.</msg>
+<msg timestamp="20220922 18:28:19.745" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 18:28:19.746" level="FAIL">WebDriverException: Message: unknown error: no element reference returned by script
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00C6C0A3+2212003]
+	Ordinal0 [0x00C02CC1+1780929]
+	Ordinal0 [0x00B1465D+804445]
+	Ordinal0 [0x00B48B7E+1018750]
+	Ordinal0 [0x00B77038+1208376]
+	Ordinal0 [0x00B5EC1C+1109020]
+	Ordinal0 [0x00B6F5B2+1177010]
+	Ordinal0 [0x00B5EA36+1108534]
+	Ordinal0 [0x00B383C9+951241]
+	Ordinal0 [0x00B39396+955286]
+	GetHandleVerifier [0x00F19CE2+2746722]
+	GetHandleVerifier [0x00F0A234+2682548]
+	GetHandleVerifier [0x00CFB34A+524234]
+	GetHandleVerifier [0x00CF9B60+518112]
+	Ordinal0 [0x00C09FBC+1810364]
+	Ordinal0 [0x00C0EA28+1829416]
+	Ordinal0 [0x00C0EB15+1829653]
+	Ordinal0 [0x00C18744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220922 18:28:18.999" endtime="20220922 18:28:19.754"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${Locate}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 18:28:19.755" endtime="20220922 18:28:19.756"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${j}</var>
+<value>${count}</value>
+<iter>
+<var name="${j}"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>${Locate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 18:28:19.758" endtime="20220922 18:28:19.759"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220922 18:28:19.759" endtime="20220922 18:28:19.760"/>
+</kw>
+<status status="NOT RUN" starttime="20220922 18:28:19.757" endtime="20220922 18:28:19.760"/>
+</iter>
+<status status="NOT RUN" starttime="20220922 18:28:19.756" endtime="20220922 18:28:19.760"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="NOT RUN" starttime="20220922 18:28:19.760" endtime="20220922 18:28:19.761"/>
+</kw>
+<status status="FAIL" starttime="20220922 18:28:18.698" endtime="20220922 18:28:19.761"/>
+</iter>
+<status status="FAIL" starttime="20220922 18:28:18.697" endtime="20220922 18:28:19.762"/>
+</for>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220922 18:28:19.763" endtime="20220922 18:28:19.764"/>
+</kw>
+<status status="FAIL" starttime="20220922 18:28:10.377" endtime="20220922 18:28:19.765">WebDriverException: Message: unknown error: no element reference returned by script
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00C6C0A3+2212003]
+	Ordinal0 [0x00C02CC1+1780929]
+	Ordinal0 [0x00B1465D+804445]
+	Ordinal0 [0x00B48B7E+1018750]
+	Ordinal0 [0x00B77038+1208376]
+	Ordinal0 [0x00B5EC1C+1109020]
+	Ordinal0 [0x00B6F5B2+1177010]
+	Ordinal0 [0x00B5EA36+1108534]
+	Ordinal0 [0x00B383C9+951241]
+	Ordinal0 [0x00B39396+955286]
+	GetHandleVerifier [0x00F19CE2+2746722]
+	GetHandleVerifier [0x00F0A234+2682548]
+	GetHandleVerifier [0x00CFB34A+524234]
+	GetHandleVerifier [0x00CF9B60+518112]
+	Ordinal0 [0x00C09FBC+1810364]
+	Ordinal0 [0x00C0EA28+1829416]
+	Ordinal0 [0x00C0EB15+1829653]
+	Ordinal0 [0x00C18744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220922 18:28:10.120" endtime="20220922 18:28:19.768"/>
+</suite>
+<status status="FAIL" starttime="20220922 18:28:10.117" endtime="20220922 18:28:19.778"/>
+</suite>
+<status status="FAIL" starttime="20220922 18:28:10.093" endtime="20220922 18:28:19.791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Graphs">TestCases.Graphs</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Dependencywheel">TestCases.Graphs.Dependencywheel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

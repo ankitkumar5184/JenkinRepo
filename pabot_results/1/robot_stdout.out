@@ -1,0 +1,99 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Graphs                                                              
+==============================================================================
+TestCases.Graphs.Dependencywheel                                              
+==============================================================================
+Area chart with hover effect                                          63
+Dependency wheel seriesBrazil ? Portugal: 5
+Dependency wheel seriesPortugal ? South Africa: 3
+Dependency wheel seriesCanada ? Portugal: 1
+Dependency wheel seriesFrance ? South Africa: 1
+Dependency wheel seriesFrance ? South Africa: 1
+Dependency wheel seriesEngland ? South Africa: 7
+Dependency wheel seriesEngland ? South Africa: 7
+Dependency wheel seriesCanada ? France: 5
+Dependency wheel seriesEngland ? South Africa: 7
+Dependency wheel seriesUSA ? England: 5
+Dependency wheel seriesCanada ? France: 5
+Dependency wheel seriesCanada ? Portugal: 1
+Dependency wheel seriesEngland ? Morocco: 2
+Dependency wheel seriesUSA ? England: 5
+Dependency wheel seriesUSA ? England: 5
+
+
+
+
+Dependency wheel seriesEngland ? Morocco: 2
+Dependency wheel seriesMexico ? Spain: 5
+Dependency wheel seriesEngland ? South Africa: 7
+
+Dependency wheel seriesSenegal ? Japan: 3
+Dependency wheel seriesUSA ? England: 5
+Dependency wheel seriesEngland ? Morocco: 2
+Dependency wheel seriesAngola ? Japan: 3
+Dependency wheel seriesMexico ? Spain: 5
+Dependency wheel seriesUSA ? England: 5
+Dependency wheel seriesUSA ? England: 5
+
+
+Dependency wheel seriesSouth Africa ? China: 5
+Dependency wheel seriesMorocco ? China: 5
+Dependency wheel seriesMorocco ? Japan: 3
+Dependency wheel seriesAngola ? China: 5
+Dependency wheel seriesAngola ? China: 5
+Dependency wheel seriesPortugal ? South Africa: 3
+Dependency wheel seriesPortugal ? South Africa: 3
+Dependency wheel seriesAngola ? China: 5
+Dependency wheel seriesMali ? China: 5
+Dependency wheel seriesMorocco ? China: 5
+Dependency wheel seriesMorocco ? China: 5
+Dependency wheel seriesMorocco ? China: 5
+Dependency wheel seriesFrance ? Mali: 3
+Dependency wheel seriesMorocco ? China: 5
+Dependency wheel seriesJapan ? Brazil: 1
+Dependency wheel seriesBrazil: 9
+Dependency wheel seriesPortugal: 15
+Dependency wheel seriesFrance: 19
+Dependency wheel seriesSpain: 12
+Dependency wheel seriesEngland: 19
+Dependency wheel seriesCanada: 7
+Dependency wheel seriesMexico: 8
+Dependency wheel seriesUSA: 8
+| FAIL |
+MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00C6C0A3+2212003]
+	Ordinal0 [0x00C02CC1+1780929]
+	Ordinal0 [0x00B14520+804128]
+	Ordinal0 [0x00B77BEF+1211375]
+	Ordinal0 [0x00B5EC1C+1109020]
+	Ordinal0 [0x00B6F5B2+1177010]
+	Ordinal0 [0x00B5EA36+1108534]
+	Ordinal0 [0x00B383C9+951241]
+	Ordinal0 [0x00B39396+955286]
+	GetHandleVerifier [0x00F19CE2+2746722]
+	GetHandleVerifier [0x00F0A234+2682548]
+	GetHandleVerifier [0x00CFB34A+524234]
+	GetHandleVerifier [0x00CF9B60+518112]
+	Ordinal0 [0x00C09FBC+1810364]
+	Ordinal0 [0x00C0EA28+1829416]
+	Ordinal0 [0x00C0EB15+1829653]
+	Ordinal0 [0x00C18744+1869636]
+	BaseThreadInitThunk [0x774AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x777A7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x777A7A6E+238]
+------------------------------------------------------------------------------
+TestCases.Graphs.Dependencywheel                                      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Graphs                                                      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\pabot_results\1\output.xml
