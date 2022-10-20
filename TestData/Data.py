@@ -2,7 +2,7 @@ import random
 import string
 
 site = "https://admin-demo.nopcommerce.com"
-browser = "Chrome"
+browser = "headlessChrome"
 username = "admin@yourstore.com"
 password = "admin"
 mail = ''.join(random.choice(string.ascii_letters) for _ in range(5, 10)) + '@gmail.com'
@@ -14,6 +14,3 @@ lastname = "kumar"
 dob = "10/6/2000"
 name = "Robot"
 systemName = "for testing purpose only"
-
-
-
