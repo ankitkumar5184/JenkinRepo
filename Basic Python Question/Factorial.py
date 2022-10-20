@@ -7,8 +7,10 @@ elif num == 0:
 else:
     for i in range(1, num + 1):
         factorial = factorial * i
-        print("factorial of", num, "is", factorial)
+print("factorial of", num, "is", factorial)
 
-# for i in range(1, num + 1):
+
+# for i in range(1, num+1):
 #     factorial = factorial * i
-#     print("factorial of", num, "is", factorial)
+# print("factorial of", num, "is", factorial)
+
