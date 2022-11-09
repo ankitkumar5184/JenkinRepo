@@ -34,7 +34,6 @@ Area chart with hover effect
 
 
      Reload Page
-#     Press keys    class:highcharts-background    ctrl+-
 
      FOR  ${i}  IN RANGE  1    ${count}
         Select Frame    //iframe[@title="Highcharts example"]

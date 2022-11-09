@@ -3,18 +3,4 @@ Suites
 ==============================================================================
 Suites.TestCase                                                               
 ==============================================================================
-Login In the Website :: This Test case do the login into the website. | PASS |
-------------------------------------------------------------------------------
-Adding Customer in the Website :: This Test case add the new custo... | PASS |
-------------------------------------------------------------------------------
-Deleting Customer from the website :: This Test case delete the ne... | PASS |
-------------------------------------------------------------------------------
-Adding Customers roles :: This Test will add customers role and ve... | PASS |
-------------------------------------------------------------------------------
-Suites.TestCase                                                       | PASS |
-4 tests, 4 passed, 0 failed
-==============================================================================
-Suites                                                                | PASS |
-4 tests, 4 passed, 0 failed
-==============================================================================
-Output:  C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\Results2\pabot_results\0\output.xml
+Login In the Website :: This Test case do the login into the website. 

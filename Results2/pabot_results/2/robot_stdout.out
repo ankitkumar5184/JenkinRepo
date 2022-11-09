@@ -3,12 +3,4 @@ Suites
 ==============================================================================
 Suites.LoginTest                                                              
 ==============================================================================
-Login In the Website                                                  | PASS |
-------------------------------------------------------------------------------
-Suites.LoginTest                                                      | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Output:  C:\Users\AnkitKumar\PycharmProjects\ProjectDemo\Results2\pabot_results\2\output.xml
+Login In the Website                                                  
